@@ -167,6 +167,33 @@ to{opacity:0;}
 from{opacity:0;}
 to{opacity:1;}
 }
+/* MOBILE RESPONSIVE */
+
+@media (max-width:600px){
+
+#letter{
+width:85%;
+padding:20px;
+}
+
+#photo{
+width:120px;
+}
+
+.cartoon{
+width:80px;
+}
+
+button{
+font-size:16px;
+padding:10px 18px;
+}
+
+.glow{
+font-size:24px;
+}
+
+}
 
 
 </style>
@@ -267,10 +294,15 @@ const excuses=[
 
 ];
 
-noBtn.addEventListener("mouseover",()=>{
+noBtn.addEventListener("touchstart",()=>{
+noBtn.addEventListener("mouseover", moveNo);
+noBtn.addEventListener("touchstart", moveNo);
+
+function moveNo(){
 
 noBtn.style.top=Math.random()*80+"%";
 noBtn.style.left=Math.random()*80+"%";
+}
 
 scale+=0.2;
 yesBtn.style.transform="scale("+scale+")";
@@ -311,3 +343,4 @@ confetti();
 </script>
 </body>
 </html>
+
